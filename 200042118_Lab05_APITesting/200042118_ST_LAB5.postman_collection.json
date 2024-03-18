@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "290e0545-4ab0-4416-8441-b962d05b680c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25347342"
+	},
+	"item": [
+		{
+			"name": "1.testStatus",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"testStatus\", function () {",
+							"pm.expect(pm.response.status).to.eql(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.testBookType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Type is a valid book type\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    responseData.forEach(function(book) {",
+							"        pm.expect(book.type).to.equal('fiction');",
+							"    });",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books?type=fiction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.setGlobalVariableWithAvailableBooksScript",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var books = pm.response.json();",
+							"",
+							"var availableBook = books.find(function(book) {",
+							"    return book.available === true;",
+							"});",
+							"",
+							"if (availableBook) {",
+							"    pm.globals.set(\"AvailableBookId\", availableBook.id);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.testNameAndTypeWithVariable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify Name includes Russian and Type equals fiction\", function () {",
+							"    const responseData = pm.response.json();",
+							"        pm.expect(responseData.name).to.include('Russian');",
+							"        pm.expect(responseData.type).to.equal('fiction');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/{{AvailableBookId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"{{AvailableBookId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.testOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var order = pm.response.json();",
+							"",
+							"pm.globals.set(\"OrderId\", order.orderId);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"bookId\": {{AvailableBookId}},\n\"customerName\": \"Nazmul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/orders/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/orders/mL2Z9P1JyfohGR-WZC29x",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"orders",
+						"mL2Z9P1JyfohGR-WZC29x"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "7161007ef35799aa5915e7abfb6c27295aec501c977cf86a64af9c28664a0e19",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
