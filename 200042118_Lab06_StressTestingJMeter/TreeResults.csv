@@ -1,0 +1,51 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1712167641572,1332,Get Status,200,OK,Thread Group 1-1,text,true,,226,130,7,7,https://simple-books-api.glitch.me/status,1332,0,993
+1712167641755,1149,Get Status,200,OK,Thread Group 1-2,text,true,,226,130,7,7,https://simple-books-api.glitch.me/status,1149,0,811
+1712167641962,959,Get Status,200,OK,Thread Group 1-3,text,true,,226,130,7,7,https://simple-books-api.glitch.me/status,959,0,714
+1712167642156,986,Get Status,200,OK,Thread Group 1-4,text,true,,226,130,9,9,https://simple-books-api.glitch.me/status,986,0,735
+1712167642905,245,Get Books,200,OK,Thread Group 1-2,text,true,,631,129,9,9,https://simple-books-api.glitch.me/books,245,0,0
+1712167642905,246,Get Books,200,OK,Thread Group 1-1,text,true,,631,129,9,9,https://simple-books-api.glitch.me/books,246,0,0
+1712167642921,308,Get Books,200,OK,Thread Group 1-3,text,true,,631,129,9,9,https://simple-books-api.glitch.me/books,308,0,0
+1712167642355,958,Get Status,200,OK,Thread Group 1-5,text,true,,226,130,9,9,https://simple-books-api.glitch.me/status,958,0,710
+1712167643142,244,Get Books,200,OK,Thread Group 1-4,text,true,,631,129,10,10,https://simple-books-api.glitch.me/books,244,0,0
+1712167643149,246,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-2,text,true,,497,142,10,10,https://simple-books-api.glitch.me/books?type=fiction,246,0,0
+1712167643150,258,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-1,text,true,,348,146,10,10,https://simple-books-api.glitch.me/books?type=non-fiction,258,0,0
+1712167643228,240,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-3,text,true,,497,142,10,10,https://simple-books-api.glitch.me/books?type=fiction,240,0,0
+1712167642543,944,Get Status,200,OK,Thread Group 1-6,text,true,,226,130,10,10,https://simple-books-api.glitch.me/status,944,0,703
+1712167643313,241,Get Books,200,OK,Thread Group 1-5,text,true,,631,129,10,10,https://simple-books-api.glitch.me/books,241,0,0
+1712167643387,247,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-4,text,true,,348,146,10,10,https://simple-books-api.glitch.me/books?type=non-fiction,247,0,0
+1712167643396,255,Get Books By Id,200,OK,Thread Group 1-2,text,true,,631,138,10,10,https://simple-books-api.glitch.me/books?bookId=4,255,0,0
+1712167643408,246,Get Books By Id,200,OK,Thread Group 1-1,text,true,,631,138,10,10,https://simple-books-api.glitch.me/books?bookId=3,246,0,0
+1712167642741,946,Get Status,200,OK,Thread Group 1-7,text,true,,226,130,10,10,https://simple-books-api.glitch.me/status,946,0,702
+1712167643469,244,Get Books By Id,200,OK,Thread Group 1-3,text,true,,631,138,10,10,https://simple-books-api.glitch.me/books?bookId=2,244,0,0
+1712167643487,244,Get Books,200,OK,Thread Group 1-6,text,true,,631,129,10,10,https://simple-books-api.glitch.me/books,244,0,0
+1712167643554,241,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-5,text,true,,348,146,10,10,https://simple-books-api.glitch.me/books?type=non-fiction,241,0,0
+1712167643634,245,Get Books By Id,200,OK,Thread Group 1-4,text,true,,631,138,10,10,https://simple-books-api.glitch.me/books?bookId=5,245,0,0
+1712167642954,944,Get Status,200,OK,Thread Group 1-8,text,true,,226,130,10,10,https://simple-books-api.glitch.me/status,944,0,698
+1712167643654,486,Post User Creation,201,Created,Thread Group 1-1,text,true,,299,278,10,10,https://simple-books-api.glitch.me/api-clients,485,0,0
+1712167643652,1153,Post User Creation,201,Created,Thread Group 1-2,text,true,,299,272,9,9,https://simple-books-api.glitch.me/api-clients,1153,0,0
+1712167643686,1121,Get Books,200,OK,Thread Group 1-7,text,true,,631,129,9,9,https://simple-books-api.glitch.me/books,1121,0,0
+1712167643713,1237,Post User Creation,201,Created,Thread Group 1-3,text,true,,299,274,8,8,https://simple-books-api.glitch.me/api-clients,1237,0,0
+1712167643732,1219,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-6,text,true,,497,142,8,8,https://simple-books-api.glitch.me/books?type=fiction,1219,0,0
+1712167643796,1158,Get Books By Id,200,OK,Thread Group 1-5,text,true,,631,138,7,7,https://simple-books-api.glitch.me/books?bookId=1,1158,0,0
+1712167643140,1861,Get Status,200,OK,Thread Group 1-9,text,true,,226,130,7,7,https://simple-books-api.glitch.me/status,1861,0,696
+1712167643880,1354,Post User Creation,201,Created,Thread Group 1-4,text,true,,299,274,7,7,https://simple-books-api.glitch.me/api-clients,1354,0,0
+1712167643898,1414,Get Books,200,OK,Thread Group 1-8,text,true,,631,129,6,6,https://simple-books-api.glitch.me/books,1414,0,0
+1712167643344,1969,Get Status,200,OK,Thread Group 1-10,text,true,,226,130,6,6,https://simple-books-api.glitch.me/status,1969,0,699
+1712167644807,510,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-7,text,true,,497,142,6,6,https://simple-books-api.glitch.me/books?type=fiction,510,0,0
+1712167644952,456,Get Books By Id,200,OK,Thread Group 1-6,text,true,,631,138,6,6,https://simple-books-api.glitch.me/books?bookId=6,456,0,0
+1712167644954,762,Post User Creation,201,Created,Thread Group 1-5,text,true,,299,274,6,6,https://simple-books-api.glitch.me/api-clients,762,0,0
+1712167645003,738,Get Books,200,OK,Thread Group 1-9,text,true,,631,129,5,5,https://simple-books-api.glitch.me/books,738,0,0
+1712167645313,507,Get Books,200,OK,Thread Group 1-10,text,true,,631,129,5,5,https://simple-books-api.glitch.me/books,507,0,0
+1712167645313,507,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-8,text,true,,348,146,5,5,https://simple-books-api.glitch.me/books?type=non-fiction,507,0,0
+1712167645317,506,Get Books By Id,200,OK,Thread Group 1-7,text,true,,631,138,5,5,https://simple-books-api.glitch.me/books?bookId=4,506,0,0
+1712167645409,523,Post User Creation,201,Created,Thread Group 1-6,text,true,,299,270,5,5,https://simple-books-api.glitch.me/api-clients,523,0,0
+1712167645741,359,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-9,text,true,,348,146,4,4,https://simple-books-api.glitch.me/books?type=non-fiction,359,0,0
+1712167645820,317,Get Books By Id,200,OK,Thread Group 1-8,text,true,,631,138,4,4,https://simple-books-api.glitch.me/books?bookId=3,317,0,0
+1712167645820,377,Get Book Type Fiction or Non-Fiction,200,OK,Thread Group 1-10,text,true,,497,142,4,4,https://simple-books-api.glitch.me/books?type=fiction,377,0,0
+1712167645823,522,Post User Creation,201,Created,Thread Group 1-7,text,true,,299,274,4,4,https://simple-books-api.glitch.me/api-clients,522,0,0
+1712167646100,323,Get Books By Id,200,OK,Thread Group 1-9,text,true,,631,138,3,3,https://simple-books-api.glitch.me/books?bookId=2,323,0,0
+1712167646137,508,Post User Creation,201,Created,Thread Group 1-8,text,true,,299,272,3,3,https://simple-books-api.glitch.me/api-clients,508,0,0
+1712167646197,701,Get Books By Id,200,OK,Thread Group 1-10,text,true,,631,138,2,2,https://simple-books-api.glitch.me/books?bookId=6,700,0,0
+1712167646423,786,Post User Creation,201,Created,Thread Group 1-9,text,true,,299,270,2,2,https://simple-books-api.glitch.me/api-clients,786,0,0
+1712167646899,514,Post User Creation,201,Created,Thread Group 1-10,text,true,,299,272,1,1,https://simple-books-api.glitch.me/api-clients,514,0,0
